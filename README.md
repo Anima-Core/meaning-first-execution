@@ -300,6 +300,16 @@ Infrastructure Reduction:       75.1% fewer GPU hours required
 
 ---
 
+## Intellectual Property Notice
+
+Portions of the systems and methods described in this repository are the subject of pending patent applications filed by Anima Core Inc.
+
+This repository provides an evaluation and validation framework only. No patent rights are granted under this license.
+
+For licensing inquiries related to patented technology, contact legal@animacore.ai.
+
+---
+
 ## License
 
 Evaluation and Research License - See LICENSE file for details.
@@ -312,6 +322,3 @@ For commercial licensing, production deployment, or enterprise use, contact: par
 
 
 **Note:** This repository provides the evaluation harness. The sealed MFEE engine is distributed separately and requires appropriate licensing for production deployment.
-
-
-
