@@ -9,7 +9,7 @@ DOI: [`10.5281/zenodo.18042792`](https://doi.org/10.5281/zenodo.18042792)
 
 **License:** Evaluation and research use only. Production use requires a commercial license from Anima Core Inc.
 
----
+**Sealed Engine Access:** The MFEE engine Docker image is provided to licensed evaluators via time-limited access. This public repo includes a deterministic stub for methodology validation.
 
 ## Key Results (Reproducible)
 
@@ -186,6 +186,8 @@ See [schema/workload_schema.md](schema/workload_schema.md) for complete specific
 
 ## Deployment Options
 
+**Note:** Option 1 (Docker) is available to licensed evaluators via time-limited access. If sealed engine access is unavailable, the harness automatically falls back to a deterministic stub for methodology validation. The public repository does not contain a runnable engine image.
+
 ### Option 1: Docker (Recommended)
 ```bash
 # Deploy sealed engine
@@ -310,6 +312,26 @@ For licensing inquiries related to patented technology, contact legal@animacore.
 
 ---
 
+## Sealed Engine Access
+
+This repository contains the MFEE **evaluation harness only**.
+
+The MFEE engine itself is distributed as a **sealed Docker image**
+for evaluation under NDA and license.
+
+Evaluation images:
+- Are time-limited (typically 14 days)
+- Enforce license acceptance at runtime
+- Are provided for benchmarking and validation only
+- Do not expose source code or internal logic
+
+To request evaluation access:
+📧 partner@animacore.ai
+
+Production use requires a separate commercial agreement with Anima Core Inc.
+
+---
+
 ## License
 
 Evaluation and Research License - See LICENSE file for details.
@@ -322,3 +344,4 @@ For commercial licensing, production deployment, or enterprise use, contact: par
 
 
 **Note:** This repository provides the evaluation harness. The sealed MFEE engine is distributed separately and requires appropriate licensing for production deployment.
+
