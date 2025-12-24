@@ -1,0 +1,34 @@
+{
+  "baseline_results": [
+    {
+      "name": "Keyword-Based Router",
+      "avoidance_rate": 0.8666666666666667,
+      "correctness_failures": 3,
+      "brittleness_score": 0.0,
+      "description": "Simple keyword matching for common queries"
+    },
+    {
+      "name": "Cache-Only Router",
+      "avoidance_rate": 0.19999999999999996,
+      "correctness_failures": 0,
+      "brittleness_score": 0.8,
+      "description": "Only serves exact cache hits + basic safety filtering"
+    },
+    {
+      "name": "Intent Classifier Router",
+      "avoidance_rate": 0.5333333333333333,
+      "correctness_failures": 2,
+      "brittleness_score": 0.0,
+      "description": "Basic intent classification with hardcoded rules"
+    }
+  ],
+  "mfee_result": {
+    "transformer_invocations": 0,
+    "total_requests": 15,
+    "avoidance_rate": 1.0,
+    "correctness_failures": 0,
+    "brittleness_score": 0.0
+  },
+  "workload_size": 15,
+  "conclusion": "MFEE demonstrates structural advantages over simple heuristic approaches"
+}
