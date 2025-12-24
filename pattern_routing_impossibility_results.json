@@ -1,0 +1,148 @@
+{
+  "theorem": "Pattern-based routing cannot escape avoidance-correctness frontier",
+  "adversarial_pairs": [
+    {
+      "surface_form": "What is Paris?",
+      "deep_form": "What is Paris? (philosophical question about identity and essence)",
+      "surface_complexity": "simple",
+      "deep_complexity": "complex",
+      "semantic_distance": 0.9
+    },
+    {
+      "surface_form": "Who is John?",
+      "deep_form": "Who is John? (existential question requiring context about which John)",
+      "surface_complexity": "simple",
+      "deep_complexity": "complex",
+      "semantic_distance": 0.8
+    },
+    {
+      "surface_form": "How many?",
+      "deep_form": "How many? (incomplete question requiring clarification)",
+      "surface_complexity": "simple",
+      "deep_complexity": "complex",
+      "semantic_distance": 0.9
+    },
+    {
+      "surface_form": "Can you please explain to me in great detail what the capital of France is?",
+      "deep_form": "Paris",
+      "surface_complexity": "complex",
+      "deep_complexity": "simple",
+      "semantic_distance": 0.7
+    },
+    {
+      "surface_form": "I would like you to analyze and provide a comprehensive overview of the mathematical result of two plus two",
+      "deep_form": "4",
+      "surface_complexity": "complex",
+      "deep_complexity": "simple",
+      "semantic_distance": 0.8
+    },
+    {
+      "surface_form": "What is a bank?",
+      "deep_form": "What is a bank? (financial institution vs river bank)",
+      "surface_complexity": "simple",
+      "deep_complexity": "complex",
+      "semantic_distance": 0.9
+    },
+    {
+      "surface_form": "How do you get to the bank?",
+      "deep_form": "How do you get to the bank? (directions vs financial advice)",
+      "surface_complexity": "simple",
+      "deep_complexity": "complex",
+      "semantic_distance": 0.8
+    },
+    {
+      "surface_form": "Is it safe?",
+      "deep_form": "Is it safe? (requires context - safe for what? in what situation?)",
+      "surface_complexity": "simple",
+      "deep_complexity": "complex",
+      "semantic_distance": 0.9
+    },
+    {
+      "surface_form": "What should I do?",
+      "deep_form": "What should I do? (requires personal context and situation understanding)",
+      "surface_complexity": "simple",
+      "deep_complexity": "complex",
+      "semantic_distance": 0.9
+    },
+    {
+      "surface_form": "What is consciousness?",
+      "deep_form": "What is consciousness? (fundamental philosophical question)",
+      "surface_complexity": "simple",
+      "deep_complexity": "complex",
+      "semantic_distance": 0.9
+    }
+  ],
+  "router_results": {
+    "Syntactic Pattern Router": {
+      "total_pairs": 10,
+      "surface_simple_deep_complex": 8,
+      "surface_complex_deep_simple": 2,
+      "correctness_failures": 7,
+      "avoidance_failures": 2,
+      "impossible_cases": 9,
+      "impossible_case_details": [
+        {
+          "pair": "AdversarialPair(surface_form='What is Paris?', deep_form='What is Paris? (philosophical question about identity and essence)', surface_complexity='simple', deep_complexity='complex', semantic_distance=0.9)",
+          "issue": "correctness_failure",
+          "explanation": "Router avoids transformer for surface-simple request with complex deep meaning"
+        },
+        {
+          "pair": "AdversarialPair(surface_form='Who is John?', deep_form='Who is John? (existential question requiring context about which John)', surface_complexity='simple', deep_complexity='complex', semantic_distance=0.8)",
+          "issue": "correctness_failure",
+          "explanation": "Router avoids transformer for surface-simple request with complex deep meaning"
+        },
+        {
+          "pair": "AdversarialPair(surface_form='How many?', deep_form='How many? (incomplete question requiring clarification)', surface_complexity='simple', deep_complexity='complex', semantic_distance=0.9)",
+          "issue": "correctness_failure",
+          "explanation": "Router avoids transformer for surface-simple request with complex deep meaning"
+        },
+        {
+          "pair": "AdversarialPair(surface_form='Can you please explain to me in great detail what the capital of France is?', deep_form='Paris', surface_complexity='complex', deep_complexity='simple', semantic_distance=0.7)",
+          "issue": "avoidance_failure",
+          "explanation": "Router uses transformer for surface-complex request with simple deep meaning"
+        },
+        {
+          "pair": "AdversarialPair(surface_form='I would like you to analyze and provide a comprehensive overview of the mathematical result of two plus two', deep_form='4', surface_complexity='complex', deep_complexity='simple', semantic_distance=0.8)",
+          "issue": "avoidance_failure",
+          "explanation": "Router uses transformer for surface-complex request with simple deep meaning"
+        },
+        {
+          "pair": "AdversarialPair(surface_form='What is a bank?', deep_form='What is a bank? (financial institution vs river bank)', surface_complexity='simple', deep_complexity='complex', semantic_distance=0.9)",
+          "issue": "correctness_failure",
+          "explanation": "Router avoids transformer for surface-simple request with complex deep meaning"
+        },
+        {
+          "pair": "AdversarialPair(surface_form='Is it safe?', deep_form='Is it safe? (requires context - safe for what? in what situation?)', surface_complexity='simple', deep_complexity='complex', semantic_distance=0.9)",
+          "issue": "correctness_failure",
+          "explanation": "Router avoids transformer for surface-simple request with complex deep meaning"
+        },
+        {
+          "pair": "AdversarialPair(surface_form='What should I do?', deep_form='What should I do? (requires personal context and situation understanding)', surface_complexity='simple', deep_complexity='complex', semantic_distance=0.9)",
+          "issue": "correctness_failure",
+          "explanation": "Router avoids transformer for surface-simple request with complex deep meaning"
+        },
+        {
+          "pair": "AdversarialPair(surface_form='What is consciousness?', deep_form='What is consciousness? (fundamental philosophical question)', surface_complexity='simple', deep_complexity='complex', semantic_distance=0.9)",
+          "issue": "correctness_failure",
+          "explanation": "Router avoids transformer for surface-simple request with complex deep meaning"
+        }
+      ]
+    },
+    "Semantic Pattern Router": {
+      "total_pairs": 10,
+      "surface_simple_deep_complex": 8,
+      "surface_complex_deep_simple": 2,
+      "correctness_failures": 0,
+      "avoidance_failures": 1,
+      "impossible_cases": 1,
+      "impossible_case_details": [
+        {
+          "pair": "AdversarialPair(surface_form='I would like you to analyze and provide a comprehensive overview of the mathematical result of two plus two', deep_form='4', surface_complexity='complex', deep_complexity='simple', semantic_distance=0.8)",
+          "issue": "avoidance_failure",
+          "explanation": "Router uses transformer for surface-complex request with simple deep meaning"
+        }
+      ]
+    }
+  },
+  "conclusion": "Pattern-based approaches face fundamental limitations that only semantic analysis can overcome"
+}

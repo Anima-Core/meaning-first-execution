@@ -1,0 +1,202 @@
+{
+  "baseline_results": [
+    {
+      "transformer_invoked": true,
+      "transformer_latency_ms": 95.01123428344727,
+      "gate_decision": null,
+      "gate_latency_ms": 0.0,
+      "gate_confidence": null,
+      "output": "TRANSFORMER_OUTPUT_23_TOKENS",
+      "tokens_generated": 23,
+      "output_type": "transformer_generated",
+      "request_id": "req_002",
+      "mode": "transformer_only",
+      "total_latency_ms": 95.01123428344727,
+      "timestamp": 1766609549.9632854
+    },
+    {
+      "transformer_invoked": true,
+      "transformer_latency_ms": 99.12252426147461,
+      "gate_decision": null,
+      "gate_latency_ms": 0.0,
+      "gate_confidence": null,
+      "output": "TRANSFORMER_OUTPUT_32_TOKENS",
+      "tokens_generated": 32,
+      "output_type": "transformer_generated",
+      "request_id": "req_003",
+      "mode": "transformer_only",
+      "total_latency_ms": 99.12252426147461,
+      "timestamp": 1766609550.0582967
+    },
+    {
+      "transformer_invoked": true,
+      "transformer_latency_ms": 106.83393478393555,
+      "gate_decision": null,
+      "gate_latency_ms": 0.0,
+      "gate_confidence": null,
+      "output": "TRANSFORMER_OUTPUT_55_TOKENS",
+      "tokens_generated": 55,
+      "output_type": "transformer_generated",
+      "request_id": "req_004",
+      "mode": "transformer_only",
+      "total_latency_ms": 106.83393478393555,
+      "timestamp": 1766609550.1574192
+    },
+    {
+      "transformer_invoked": true,
+      "transformer_latency_ms": 117.22898483276367,
+      "gate_decision": null,
+      "gate_latency_ms": 0.0,
+      "gate_confidence": null,
+      "output": "TRANSFORMER_OUTPUT_82_TOKENS",
+      "tokens_generated": 82,
+      "output_type": "transformer_generated",
+      "request_id": "req_005",
+      "mode": "transformer_only",
+      "total_latency_ms": 117.22898483276367,
+      "timestamp": 1766609550.2642531
+    }
+  ],
+  "an1_results": [
+    {
+      "transformer_invoked": false,
+      "transformer_latency_ms": 0.0,
+      "gate_decision": "direct",
+      "gate_latency_ms": 3.5123825073242188,
+      "gate_confidence": 0.8,
+      "output": "DIRECT_SOLUTION_CONFIDENCE_0.80",
+      "tokens_generated": 50,
+      "output_type": "direct",
+      "gate_metadata": {
+        "gate_type": "local_stub",
+        "input_length": 30,
+        "max_tokens": 50,
+        "decision_seed": 63,
+        "category_hint": "unknown",
+        "call_count": 2,
+        "fallback_used": true,
+        "fallback_reason": "sealed_gate_unavailable"
+      },
+      "request_id": "req_002",
+      "mode": "an1",
+      "total_latency_ms": 3.5123825073242188,
+      "timestamp": 1766609550.3869965
+    },
+    {
+      "transformer_invoked": false,
+      "transformer_latency_ms": 0.0,
+      "gate_decision": "no_op",
+      "gate_latency_ms": 1.9986629486083984,
+      "gate_confidence": 0.85,
+      "output": "NO_OPERATION_NEEDED",
+      "tokens_generated": 0,
+      "output_type": "no_op",
+      "gate_metadata": {
+        "gate_type": "local_stub",
+        "input_length": 36,
+        "max_tokens": 300,
+        "decision_seed": 0,
+        "category_hint": "unknown",
+        "call_count": 3,
+        "fallback_used": true,
+        "fallback_reason": "sealed_gate_unavailable"
+      },
+      "request_id": "req_003",
+      "mode": "an1",
+      "total_latency_ms": 1.9986629486083984,
+      "timestamp": 1766609550.390509
+    },
+    {
+      "transformer_invoked": false,
+      "transformer_latency_ms": 0.0,
+      "gate_decision": "no_op",
+      "gate_latency_ms": 1.5270709991455078,
+      "gate_confidence": 0.85,
+      "output": "NO_OPERATION_NEEDED",
+      "tokens_generated": 0,
+      "output_type": "no_op",
+      "gate_metadata": {
+        "gate_type": "local_stub",
+        "input_length": 25,
+        "max_tokens": 100,
+        "decision_seed": 2,
+        "category_hint": "unknown",
+        "call_count": 4,
+        "fallback_used": true,
+        "fallback_reason": "sealed_gate_unavailable"
+      },
+      "request_id": "req_004",
+      "mode": "an1",
+      "total_latency_ms": 1.5270709991455078,
+      "timestamp": 1766609550.3925076
+    },
+    {
+      "transformer_invoked": true,
+      "transformer_latency_ms": 115.17953872680664,
+      "gate_decision": "render",
+      "gate_latency_ms": 3.008127212524414,
+      "gate_confidence": 0.75,
+      "output": "TRANSFORMER_OUTPUT_77_TOKENS",
+      "tokens_generated": 77,
+      "output_type": "render",
+      "gate_metadata": {
+        "gate_type": "local_stub",
+        "input_length": 41,
+        "max_tokens": 200,
+        "decision_seed": 96,
+        "category_hint": "unknown",
+        "call_count": 5,
+        "fallback_used": true,
+        "fallback_reason": "sealed_gate_unavailable"
+      },
+      "request_id": "req_005",
+      "mode": "an1",
+      "total_latency_ms": 118.18766593933105,
+      "timestamp": 1766609550.3940346
+    }
+  ],
+  "baseline_metrics": {
+    "latency": {
+      "mean": 104.54916954040527,
+      "p95": 117.22898483276367
+    },
+    "throughput": {
+      "requests_per_sec": 9.564877505923455
+    },
+    "invocation": {
+      "transformer_rate": 0.0
+    },
+    "tokens": {
+      "total_generated": 192
+    },
+    "compute": {
+      "total_energy_joules": 125.45900344848633,
+      "total_flops": 3548160000000
+    }
+  },
+  "an1_metrics": {
+    "latency": {
+      "mean": 31.306445598602295,
+      "p95": 118.18766593933105
+    },
+    "throughput": {
+      "requests_per_sec": 31.94230392110198
+    },
+    "invocation": {
+      "transformer_rate": 0.0
+    },
+    "tokens": {
+      "total_generated": 127
+    },
+    "compute": {
+      "total_energy_joules": 37.567734718322754,
+      "total_flops": 2346960000000
+    }
+  },
+  "model_info": {
+    "model_name": "gemma-2-9b",
+    "parameter_count": 9240000000,
+    "architecture": "transformer_decoder",
+    "precision": "fp16"
+  }
+}
