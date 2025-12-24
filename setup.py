@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="mfee-eval",
+    name="meaning-first-execution",
     version="1.0.0",
     description="MFEE Evaluation Harness - Avoid ~75% of Transformer Inference",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="Anima Core Inc",
-    author_email="contact@animacore.com",
-    url="https://github.com/animacore/mfee-eval",
+    author_email="contact@animacore.ai",
+    url="https://github.com/Anima-Core/meaning-first-execution",
     packages=find_packages(),
     install_requires=[
         "torch>=1.9.0",
@@ -37,4 +37,5 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
     ],
+
 )
