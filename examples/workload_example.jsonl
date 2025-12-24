@@ -1,0 +1,5 @@
+{"id": "req_001", "modality": "text", "input": "What is 2+2?", "max_output_tokens": 50}
+{"id": "req_002", "modality": "text", "input": "What is the capital of France?", "max_output_tokens": 50}
+{"id": "req_003", "modality": "text", "input": "Write a creative story about a robot", "max_output_tokens": 300}
+{"id": "req_004", "modality": "text", "input": "Hello, how are you today?", "max_output_tokens": 100}
+{"id": "req_005", "modality": "text", "input": "Explain quantum computing in simple terms", "max_output_tokens": 200}

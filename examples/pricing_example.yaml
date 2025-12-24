@@ -1,0 +1,13 @@
+pricing:
+  gpu_cost_per_hour: 2.50  # Conservative GPU cost estimate
+  token_cost_per_million: 20.0  # Cost per 1M tokens
+  energy_cost_per_kwh: 0.12  # Energy cost per kWh
+  
+scaling:
+  requests_per_day: 100000000  # 100M requests/day (hyperscaler scale)
+  
+assumptions:
+  # Conservative assumptions for cost calculations
+  tokens_per_request: 150  # Average tokens per request
+  gpu_utilization: 0.8  # GPU utilization factor
+  energy_per_gpu_hour: 0.3  # kWh per GPU hour
