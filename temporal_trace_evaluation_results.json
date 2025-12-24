@@ -1,0 +1,140 @@
+{
+  "trace_metadata": {
+    "total_requests": 25,
+    "time_span_minutes": 200,
+    "unique_users": 21,
+    "categories": 14
+  },
+  "performance_metrics": {
+    "baseline_transformer_calls": 23,
+    "mfee_transformer_calls": 6,
+    "avoidance_rate": 0.76,
+    "total_requests": 25
+  },
+  "temporal_analysis": {
+    "redundancy_analysis": {
+      "password_reset": {
+        "total_requests": 4,
+        "transformer_invocations": 0,
+        "redundancy_exploitation": 1.0,
+        "first_request_time": "2025-12-24T16:25:08.948489",
+        "last_request_time": "2025-12-24T17:00:08.948489"
+      },
+      "vpn_issue": {
+        "total_requests": 2,
+        "transformer_invocations": 0,
+        "redundancy_exploitation": 1.0,
+        "first_request_time": "2025-12-24T17:15:08.948489",
+        "last_request_time": "2025-12-24T17:20:08.948489"
+      },
+      "account_access": {
+        "total_requests": 2,
+        "transformer_invocations": 1,
+        "redundancy_exploitation": 0.5,
+        "first_request_time": "2025-12-24T18:05:08.948489",
+        "last_request_time": "2025-12-24T18:20:08.948489"
+      },
+      "email_setup": {
+        "total_requests": 2,
+        "transformer_invocations": 1,
+        "redundancy_exploitation": 0.5,
+        "first_request_time": "2025-12-24T18:45:08.948489",
+        "last_request_time": "2025-12-24T18:50:08.948489"
+      },
+      "complex_technical": {
+        "total_requests": 2,
+        "transformer_invocations": 0,
+        "redundancy_exploitation": 1.0,
+        "first_request_time": "2025-12-24T19:05:08.948489",
+        "last_request_time": "2025-12-24T19:15:08.948489"
+      },
+      "password_reset_variant": {
+        "total_requests": 5,
+        "transformer_invocations": 1,
+        "redundancy_exploitation": 0.8,
+        "first_request_time": "2025-12-24T19:25:08.948489",
+        "last_request_time": "2025-12-24T19:45:08.948489"
+      }
+    },
+    "followup_analysis": {
+      "user_001": {
+        "total_requests": 3,
+        "transformer_invocations": 0,
+        "session_efficiency": 1.0,
+        "request_sequence": [
+          "How do I reset my password?...",
+          "I tried the password reset but didn't get an email...",
+          "How long does the password reset email take?..."
+        ]
+      },
+      "user_005": {
+        "total_requests": 2,
+        "transformer_invocations": 1,
+        "session_efficiency": 0.5,
+        "request_sequence": [
+          "VPN won't connect...",
+          "VPN connection failed, error code 809..."
+        ]
+      },
+      "user_007": {
+        "total_requests": 2,
+        "transformer_invocations": 1,
+        "session_efficiency": 0.5,
+        "request_sequence": [
+          "How do I install Microsoft Office?...",
+          "Office installation is stuck at 50%..."
+        ]
+      }
+    },
+    "total_categories": 14,
+    "total_users": 21
+  },
+  "trace_sample": [
+    {
+      "id": "req_001",
+      "modality": "text",
+      "input": "How do I reset my password?",
+      "max_output_tokens": 150,
+      "timestamp": "2025-12-24T16:25:08.948489",
+      "user_id": "user_001",
+      "category": "password_reset"
+    },
+    {
+      "id": "req_002",
+      "modality": "text",
+      "input": "I tried the password reset but didn't get an email",
+      "max_output_tokens": 200,
+      "timestamp": "2025-12-24T16:30:08.948489",
+      "user_id": "user_001",
+      "category": "password_reset_followup"
+    },
+    {
+      "id": "req_003",
+      "modality": "text",
+      "input": "How long does the password reset email take?",
+      "max_output_tokens": 100,
+      "timestamp": "2025-12-24T16:33:08.948489",
+      "user_id": "user_001",
+      "category": "password_reset_timing"
+    },
+    {
+      "id": "req_004",
+      "modality": "text",
+      "input": "How do I reset my password?",
+      "max_output_tokens": 150,
+      "timestamp": "2025-12-24T16:40:08.948489",
+      "user_id": "user_002",
+      "category": "password_reset"
+    },
+    {
+      "id": "req_005",
+      "modality": "text",
+      "input": "How do I reset my password?",
+      "max_output_tokens": 150,
+      "timestamp": "2025-12-24T16:50:08.948489",
+      "user_id": "user_003",
+      "category": "password_reset"
+    }
+  ],
+  "conclusion": "MFEE successfully exploits temporal redundancy in realistic enterprise workloads"
+}

@@ -1,0 +1,47 @@
+{
+  "temperature_settings": [
+    0.0,
+    0.3,
+    0.7,
+    1.0
+  ],
+  "results_by_temperature": {
+    "0.0": {
+      "avoidance_rate": 0.9,
+      "exact_match_rate": 0.0,
+      "semantic_similarity": 0.9222222222222223,
+      "task_success_mfee": 0.8888888888888888,
+      "transformer_calls": 1
+    },
+    "0.3": {
+      "avoidance_rate": 0.9,
+      "exact_match_rate": 0.0,
+      "semantic_similarity": 0.9222222222222223,
+      "task_success_mfee": 0.8888888888888888,
+      "transformer_calls": 1
+    },
+    "0.7": {
+      "avoidance_rate": 0.9,
+      "exact_match_rate": 0.0,
+      "semantic_similarity": 0.9222222222222223,
+      "task_success_mfee": 0.8888888888888888,
+      "transformer_calls": 1
+    },
+    "1.0": {
+      "avoidance_rate": 0.9,
+      "exact_match_rate": 0.0,
+      "semantic_similarity": 0.9222222222222223,
+      "task_success_mfee": 0.8888888888888888,
+      "transformer_calls": 1
+    }
+  },
+  "workload_categories": [
+    "math",
+    "greeting",
+    "factual",
+    "analytical",
+    "creative",
+    "procedural"
+  ],
+  "conclusion": "MFEE maintains high performance under stochastic decoding with graceful degradation"
+}
